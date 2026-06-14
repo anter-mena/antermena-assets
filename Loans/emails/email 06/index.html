@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Start Building Your Credit Score</title>
+
+    <!-- Import Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Mona+Sans:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Mona Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+          "Helvetica Neue", Arial, sans-serif;
+        background-color: #f5f4f0;
+        margin: 0;
+        padding: 30px 20px;
+      }
+
+      .email-container {
+        max-width: 560px;
+        margin: 0 auto;
+        background-color: #f5f4f0;
+        text-align: center;
+      }
+
+      /* Logo */
+      .logo {
+        margin-bottom: 30px;
+      }
+
+      .logo a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #667eea;
+        padding: 10px;
+        border-radius: 50%;
+        box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+        width: 40px;
+        height: 40px;
+        margin: 0 auto;
+      }
+
+      .logo img {
+        height: 14px;
+        width: auto;
+        display: block;
+        filter: brightness(0) invert(1);
+      }
+
+      /* Hero Illustration */
+      .hero-illustration {
+        width: 100%;
+        max-width: 520px;
+        height: auto;
+        margin: 20px auto 25px;
+        display: block;
+        border-radius: 12px;
+      }
+
+      /* Main Content */
+      .main-heading {
+        font-family: "Anton", sans-serif;
+        font-size: 42px;
+        font-weight: 400;
+        color: #333333;
+        line-height: 1.2;
+        margin-bottom: 0;
+        letter-spacing: -0.02em;
+      }
+
+      .description {
+        font-family: "Mona Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Arial, sans-serif;
+        font-size: 16px;
+        color: #555555;
+        line-height: 1.7;
+        margin-bottom: 30px;
+        max-width: 480px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      /* CTA Button */
+      .cta-button {
+        display: inline-block;
+        background-color: #667eea;
+        color: #ffffff;
+        padding: 16px 40px;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 600;
+        font-family: "Mona Sans", sans-serif;
+        border-radius: 50px;
+        transition: background-color 0.3s;
+        margin-bottom: 30px;
+      }
+
+      .cta-button:hover {
+        background-color: #5568d3;
+      }
+
+      /* Divider */
+      .divider {
+        width: 60px;
+        height: 1px;
+        background-color: #d5d4cf;
+        margin: 0 auto 30px;
+      }
+
+      /* Support Section */
+      .support-text {
+        font-family: "Mona Sans", sans-serif;
+        font-size: 14px;
+        color: #666666;
+        line-height: 1.7;
+        margin-bottom: 35px;
+        max-width: 480px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .support-text a {
+        color: #667eea;
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      .support-text a:hover {
+        text-decoration: underline;
+      }
+
+      /* Social Icons */
+      .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+        margin-bottom: 25px;
+      }
+
+      .social-icon {
+        opacity: 0.7;
+        transition: opacity 0.3s;
+      }
+
+      .social-icon img {
+        width: 20px;
+        height: 20px;
+      }
+
+      .social-icon:hover {
+        opacity: 1;
+      }
+
+      /* Footer Links */
+      .footer-links {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 25px;
+      }
+
+      .footer-link {
+        font-family: "Mona Sans", sans-serif;
+        color: #666666;
+        text-decoration: none;
+        font-size: 13px;
+        padding: 0 8px;
+        border-right: 1px solid #d5d4cf;
+      }
+
+      .footer-link:last-child {
+        border-right: none;
+      }
+
+      .footer-link:hover {
+        color: #333333;
+      }
+
+      /* Legal Text */
+      .legal-text {
+        font-family: "Mona Sans", sans-serif;
+        font-size: 11px;
+        color: #999999;
+        line-height: 1.6;
+        max-width: 480px;
+        margin: 0 auto;
+      }
+
+      .legal-text a {
+        color: #999999;
+        text-decoration: underline;
+      }
+
+      /* Responsive */
+      @media only screen and (max-width: 600px) {
+        body {
+          padding: 25px 15px;
+        }
+
+        .logo a {
+          width: 38px;
+          height: 38px;
+          padding: 8px;
+        }
+
+        .logo img {
+          height: 12px;
+        }
+
+        .main-heading {
+          font-size: 34px;
+        }
+
+        .description {
+          font-size: 15px;
+        }
+
+        .footer-links {
+          flex-direction: column;
+          gap: 12px;
+        }
+
+        .footer-link {
+          border-right: none;
+          padding: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="email-container">
+      <!-- Logo -->
+      <div class="logo">
+        <a href="https://loanhero.ca/">
+          <img
+            src="https://cdn.jsdelivr.net/gh/ChaosAfterParty/email_models@main/assets/logo.png"
+            alt="Loan Hero"
+          />
+        </a>
+      </div>
+
+      <!-- Main Content -->
+      <h1 class="main-heading">Start building your<br />credit score today</h1>
+
+      <!-- Hero Illustration -->
+      <a href="https://loanhero.ca/loan-application/">
+        <img
+          src="https://raw.githubusercontent.com/ChaosAfterParty/email_models/refs/heads/main/assets/banner_05.png"
+          alt="Loan Hero - Build Your Credit"
+          class="hero-illustration"
+        />
+      </a>
+
+      <p class="description">
+        You're so close to starting your credit-building journey. With Loan
+        Hero, every on-time payment is reported to major credit bureaus. Get the
+        funds you need while improving your financial future—one payment at a
+        time.
+      </p>
+
+      <!-- CTA Button -->
+      <a href="https://loanhero.ca/loan-application/" class="cta-button"
+        >Start My Application</a
+      >
+
+      <!-- Divider -->
+      <div class="divider"></div>
+
+      <!-- Support Section -->
+      <p class="support-text">
+        If you have any questions, please visit our
+        <a href="https://loanhero.ca/">FAQs</a> or email us at<br />
+        <a href="mailto:support@loanhero.ca">support@loanhero.ca</a>. Our team can answer questions about your loan or help you understand
+        how we report to credit bureaus.
+      </p>
+
+      <!-- Social Icons -->
+      <div class="social-icons">
+        <a href="https://365loan.ca/" class="social-icon">
+          <img
+            src="https://cdn.jsdelivr.net/gh/ChaosAfterParty/email_models@main/assets/facebook.svg"
+            alt="Facebook"
+          />
+        </a>
+        <a href="https://365loan.ca/" class="social-icon">
+          <img
+            src="https://cdn.jsdelivr.net/gh/ChaosAfterParty/email_models@main/assets/instagram.svg"
+            alt="Instagram"
+          />
+        </a>
+        <a href="https://365loan.ca/" class="social-icon">
+          <img
+            src="https://cdn.jsdelivr.net/gh/ChaosAfterParty/email_models@main/assets/x.svg"
+            alt="X"
+          />
+        </a>
+        <a href="https://365loan.ca/" class="social-icon">
+          <img
+            src="https://cdn.jsdelivr.net/gh/ChaosAfterParty/email_models@main/assets/tiktok.png"
+            alt="TikTok"
+          />
+        </a>
+      </div>
+
+      <!-- Footer Links -->
+      <div class="footer-links">
+        <a href="https://365loan.ca/" class="footer-link">My Account</a>
+        <a href="https://365loan.ca/" class="footer-link">How it works</a>
+        <a href="https://365loan.ca/" class="footer-link">FAQs</a>
+        <a href="https://365loan.ca/" class="footer-link"
+          >Terms & Conditions</a
+        >
+        <a href="https://365loan.ca/" class="footer-link">Privacy Policy</a>
+      </div>
+
+      <!-- Legal Text -->
+      <p class="legal-text">
+        You have received this email as a registered user of 365 Loan<br />
+        365
