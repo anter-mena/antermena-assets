@@ -26,12 +26,27 @@
       max-width: 620px;
       margin: 0 auto;
       background-color: #ffffff;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .banner-bg {
+      position: absolute;
+      top: 50%;
+      left: 0px;
+      width: 100%;
+      transform: translateY(-54%);
+      z-index: 0;
+    }
+
+    .email-content {
+      position: relative;
+      z-index: 1;
     }
 
     /* ── HEADER ── */
     .header {
       padding: 26px 40px 22px;
-      border-bottom: 1px solid #ebebeb;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -52,7 +67,7 @@
 
     .badge {
       background: #0a0a0a;
-      color: #C9A84C;
+      color: #ffffff;
       font-family: 'Barlow Condensed', Arial, sans-serif;
       font-size: 11px;
       font-weight: 800;
@@ -62,21 +77,37 @@
       border-radius: 2px;
     }
 
+    .logo {
+      height: 36px;
+      display: block;
+    }
+
+    .footer-logo {
+      height: 36px;
+      display: block;
+      margin: 0 auto 10px;
+      filter: brightness(0);
+      opacity: 0.2;
+    }
+
     /* ── HEADLINE BLOCK ── */
     .headline-block {
-      padding: 48px 40px 36px;
+      padding: 48px 40px 500px;
       text-align: center;
-      border-bottom: 1px solid #ebebeb;
     }
 
     .eyebrow {
+      display: inline-block;
+      background: #0a0a0a;
+      color: #ffffff;
       font-family: 'Barlow Condensed', Arial, sans-serif;
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 4px;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 3px;
       text-transform: uppercase;
-      color: #C9A84C;
-      margin-bottom: 16px;
+      padding: 5px 14px;
+      border-radius: 2px;
+      margin-bottom: 20px;
     }
 
     .headline-block h1 {
@@ -127,10 +158,8 @@
 
     /* ── OFFER BLOCK ── */
     .offer-block {
-      padding: 48px 40px;
+      padding: 48px 40px 20px;
       text-align: center;
-      border-top: 1px solid #ebebeb;
-      border-bottom: 1px solid #ebebeb;
     }
 
     .offer-tag {
@@ -167,26 +196,26 @@
 
     .offer-label {
       font-family: 'Barlow Condensed', Arial, sans-serif;
-      font-size: 18px;
+      font-size: 13px;
       font-weight: 700;
       letter-spacing: 4px;
       text-transform: uppercase;
       color: #999999;
-      margin-bottom: 18px;
+      margin-bottom: 12px;
     }
 
     .offer-desc {
-      font-size: 15px;
+      font-size: 13px;
       color: #666666;
-      line-height: 1.7;
+      line-height: 1.6;
       max-width: 400px;
-      margin: 0 auto 32px;
+      margin: 0 auto 28px;
     }
 
     .cta-btn {
       display: inline-block;
       background: #0a0a0a;
-      color: #C9A84C;
+      color: #ffffff;
       font-family: 'Barlow Condensed', Arial, sans-serif;
       font-size: 16px;
       font-weight: 900;
@@ -208,7 +237,6 @@
     .devices-strip {
       padding: 28px 40px;
       text-align: center;
-      border-bottom: 1px solid #ebebeb;
     }
 
     .devices-label {
@@ -237,7 +265,7 @@
 
     /* ── FOOTER ── */
     .footer {
-      padding: 32px 40px 40px;
+      padding: 16px 40px 40px;
       text-align: center;
     }
 
@@ -291,60 +319,45 @@
 <div class="email-wrapper">
 <div class="email-container">
 
-  <!-- HEADER -->
-  <div class="header">
-    <div class="brand">Easy<span>IPTV</span></div>
-    <div class="badge">World Cup 2026</div>
-  </div>
+  <!-- BACKGROUND BANNER -->
+  <img class="banner-bg" src="https://cdn.jsdelivr.net/gh/anter-mena/antermena-assets@main/Iptv/emails/email%2003/assets/banner.png" alt="" />
 
-  <!-- HEADLINE -->
-  <div class="headline-block">
-    <div class="eyebrow">For the EasyIPTV Family</div>
-    <h1>Every Match.<br/><span class="gold">Zero Blackouts.</span></h1>
-    <h2>Your World Cup. Your Screens.</h2>
-    <p>
-      The World Cup is here — and EasyIPTV makes sure you don't miss a single goal.
-      Stream every match live in stunning <strong style="color:#0a0a0a;">4K</strong>, on any device,
-      anywhere in Canada. No buffering. No blackouts. Just pure football.
-    </p>
-  </div>
+  <div class="email-content">
 
-  <!-- HERO IMAGE -->
-  <div class="hero">
-    <img src="assets/BackGround.png" alt="FIFA World Cup 2026 — EasyIPTV" />
-  </div>
-
-  <!-- OFFER -->
-  <div class="offer-block">
-    <div class="offer-tag">Limited Time Offer</div>
-    <div class="offer-percent"><sup>%</sup>20 OFF</div>
-    <div class="offer-label">Your Upgrade or First Month</div>
-    <p class="offer-desc">
-      Upgrade to our Premium Package this week and save 20% — more channels,
-      more screens, and every World Cup match covered from group stage to the final.
-    </p>
-    <a href="https://easyiptv.ca" class="cta-btn">Claim My 20% Off</a>
-    <div class="offer-note">Offer valid through easyiptv.ca &nbsp;·&nbsp; Limited time only</div>
-  </div>
-
-  <!-- DEVICES STRIP -->
-  <div class="devices-strip">
-    <div class="devices-label">Works on every screen</div>
-    <div class="devices-list">
-      Smart TV <span>·</span> iPhone <span>·</span> Android <span>·</span> Tablet <span>·</span> Laptop <span>·</span> Firestick
+    <!-- HEADER -->
+    <div class="header">
+      <img src="https://cdn.jsdelivr.net/gh/anter-mena/antermena-assets@main/Iptv/emails/email%2003/assets/logo.png" alt="EasyIPTV" class="logo" />
+      <div class="badge">World Cup 2026</div>
     </div>
-  </div>
 
-  <!-- FOOTER -->
-  <div class="footer">
-    <div class="footer-brand">Easy<span>IPTV</span> Canada</div>
-    <div class="footer-copy">© 2026 EasyIPTV Canada. All rights reserved.</div>
-    <div class="footer-links">
-      <a href="#">Privacy</a>
-      <a href="#">Terms</a>
-      <a href="#">Unsubscribe</a>
+    <!-- HEADLINE -->
+    <div class="headline-block">
+      <h1>UPGRADE FOR<br/>THE BIGGEST<br/><span class="gold">TOURNAMENT.</span></h1>
     </div>
-  </div>
+
+    <!-- OFFER -->
+    <div class="offer-block">
+      <div class="offer-percent"><sup>%</sup>20 OFF</div>
+      <div class="offer-label">Your Upgrade or First Month</div>
+      <p class="offer-desc">
+        Upgrade to our Premium Package this week and save 20% — more channels,
+        more screens, and every World Cup match covered from group stage to the final.
+      </p>
+      <a href="https://easyiptv.ca" class="cta-btn">Claim My 20% Off</a>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+      <img src="https://cdn.jsdelivr.net/gh/anter-mena/antermena-assets@main/Iptv/emails/email%2003/assets/logo.png" alt="EasyIPTV" class="footer-logo" />
+      <div class="footer-copy">© 2026 EasyIPTV Canada. All rights reserved.</div>
+      <div class="footer-links">
+        <a href="https://easyiptv.ca/privacy-policy">Privacy</a>
+        <a href="https://easyiptv.ca/terms-of-service">Terms</a>
+        <a href="#">Unsubscribe</a>
+      </div>
+    </div>
+
+  </div><!-- /.email-content -->
 
 </div>
 </div>
