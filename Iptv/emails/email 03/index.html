@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>EasyIPTV — World Cup 2026</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@400;500;600&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background-color: #f2f2f2;
+      font-family: 'Barlow', Arial, sans-serif;
+      color: #0a0a0a;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .email-wrapper {
+      width: 100%;
+      background-color: #f2f2f2;
+    }
+
+    .email-container {
+      max-width: 620px;
+      margin: 0 auto;
+      background-color: #ffffff;
+    }
+
+    /* ── HEADER ── */
+    .header {
+      padding: 26px 40px 22px;
+      border-bottom: 1px solid #ebebeb;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      font-family: 'Barlow Condensed', Arial, sans-serif;
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #0a0a0a;
+    }
+
+    .brand span {
+      color: #C9A84C;
+    }
+
+    .badge {
+      background: #0a0a0a;
+      color: #C9A84C;
+      font-family: 'Barlow Condensed', Arial, sans-serif;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 2px;
+    }
+
+    /* ── HEADLINE BLOCK ── */
+    .headline-block {
+      padding: 48px 40px 36px;
+      text-align: center;
+      border-bottom: 1px solid #ebebeb;
+    }
+
+    .eyebrow {
+      font-family: 'Barlow Condensed', Arial, sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: #C9A84C;
+      margin-bottom: 16px;
+    }
+
+    .headline-block h1 {
+      font-family: 'Barlow Condensed', Arial, sans-serif;
+      font-size: 62px;
+      font-weight: 900;
+      line-height: 1;
+      text-transform: uppercase;
+      color: #0a0a0a;
+      letter-spacing: -1px;
+      margin-bottom: 6px;
+    }
+
+    .headline-block h1 .gold {
+      color: #C9A84C;
+    }
+
+    .headline-block h2 {
+      font-family: 'Barlow Condensed', Arial, sans-serif;
+      font-size: 20px;
+      font-weight: 600;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: #999999;
+      margin-bottom: 24px;
+    }
+
+    .headline-block p {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.75;
+      color: #555555;
+      max-width: 460px;
+      margin: 0 auto;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      background-color: #ffffff;
+      text-align: center;
+    }
+
+    .hero img {
+      width: 100%;
+      max-width: 620px;
+      display: block;
+    }
+
+    /* ── OFFER BLOCK ── */
+    .offer-block {
+      padding: 48px 40px;
+      text-align: center;
+      border-top: 1px solid #ebebeb;
+      border-bottom: 1px solid #ebebeb;
+    }
+
+    .offer-tag {
+      display: inline-block;
+      background: #0a0a0a;
+      color: #C9A84C;
+      font-family: 'Barlow Condensed', Arial, sans-serif;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 2px;
+      margin-bottom: 28px;
+    }
+
+    .offer-percent {
+      font-family: 'Barlow Condensed', Arial, sans-serif;
+      font-size: 96px;
+      font-weight: 900;
+      line-height: 1;
+      color: #0a0a0a;
+      letter-spacing: -4px;
+      margin-bottom: 4px;
+    }
+
+    .offer-percent sup {
+      font-size: 44px;
+      vertical-align: top;
+      margin-top: 18px;
+      display: inline-block;
+      letter-spacing: 0;
+    }
+
+    .offer-label {
+      font-family: 'Barlow Condensed', Arial, sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: #999999;
+      margin-bottom: 18px;
+    }
+
+    .offer-desc {
+      font-size: 15px;
+      color: #666666;
+      line-height: 1.7;
+      max-width: 400px;
+      margin: 0 auto 32px;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      background: #0a0a0a;
+      color: #C9A84C;
+      font-family: 'Barlow Condensed', Arial, sans-serif;
+      font-size: 16px;
+      font-weight: 900;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 18px 52px;
+      border-radius: 3px;
+    }
+
+    .offer-note {
+      margin-top: 16px;
+      font-size: 12px;
+      color: #bbbbbb;
+      letter-spacing: 0.5px;
+    }
+
+    /* ── DEVICES STRIP ── */
+    .devices-strip {
+      padding: 28px 40px;
+      text-align: center;
+      border-bottom: 1px solid #ebebeb;
+    }
+
+    .devices-label {
+      font-family: 'Barlow Condensed', Arial, sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: #bbbbbb;
+      margin-bottom: 12px;
+    }
+
+    .devices-list {
+      font-family: 'Barlow Condensed', Arial, sans-serif;
+      font-size: 17px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #555555;
+    }
+
+    .devices-list span {
+      color: #C9A84C;
+      margin: 0 8px;
+    }
+
+    /* ── FOOTER ── */
+    .footer {
+      padding: 32px 40px 40px;
+      text-align: center;
+    }
+
+    .footer-brand {
+      font-family: 'Barlow Condensed', Arial, sans-serif;
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #cccccc;
+      margin-bottom: 8px;
+    }
+
+    .footer-brand span {
+      color: #C9A84C;
+      opacity: 0.6;
+    }
+
+    .footer-copy {
+      font-size: 12px;
+      color: #bbbbbb;
+      margin-bottom: 14px;
+    }
+
+    .footer-links {
+      font-size: 12px;
+      color: #cccccc;
+      letter-spacing: 1px;
+    }
+
+    .footer-links a {
+      color: #aaaaaa;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    /* ── MOBILE ── */
+    @media (max-width: 480px) {
+      .header { padding: 20px 24px 16px; }
+      .headline-block { padding: 36px 24px 28px; }
+      .headline-block h1 { font-size: 44px; }
+      .headline-block h2 { font-size: 15px; }
+      .offer-block { padding: 36px 24px; }
+      .offer-percent { font-size: 72px; }
+      .devices-strip { padding: 24px; }
+      .footer { padding: 28px 24px 36px; }
+    }
+  </style>
+</head>
+<body>
+<div class="email-wrapper">
+<div class="email-container">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="brand">Easy<span>IPTV</span></div>
+    <div class="badge">World Cup 2026</div>
+  </div>
+
+  <!-- HEADLINE -->
+  <div class="headline-block">
+    <div class="eyebrow">For the EasyIPTV Family</div>
+    <h1>Every Match.<br/><span class="gold">Zero Blackouts.</span></h1>
+    <h2>Your World Cup. Your Screens.</h2>
+    <p>
+      The World Cup is here — and EasyIPTV makes sure you don't miss a single goal.
+      Stream every match live in stunning <strong style="color:#0a0a0a;">4K</strong>, on any device,
+      anywhere in Canada. No buffering. No blackouts. Just pure football.
+    </p>
+  </div>
+
+  <!-- HERO IMAGE -->
+  <div class="hero">
+    <img src="assets/BackGround.png" alt="FIFA World Cup 2026 — EasyIPTV" />
+  </div>
+
+  <!-- OFFER -->
+  <div class="offer-block">
+    <div class="offer-tag">Limited Time Offer</div>
+    <div class="offer-percent"><sup>%</sup>20 OFF</div>
+    <div class="offer-label">Your Upgrade or First Month</div>
+    <p class="offer-desc">
+      Upgrade to our Premium Package this week and save 20% — more channels,
+      more screens, and every World Cup match covered from group stage to the final.
+    </p>
+    <a href="https://easyiptv.ca" class="cta-btn">Claim My 20% Off</a>
+    <div class="offer-note">Offer valid through easyiptv.ca &nbsp;·&nbsp; Limited time only</div>
+  </div>
+
+  <!-- DEVICES STRIP -->
+  <div class="devices-strip">
+    <div class="devices-label">Works on every screen</div>
+    <div class="devices-list">
+      Smart TV <span>·</span> iPhone <span>·</span> Android <span>·</span> Tablet <span>·</span> Laptop <span>·</span> Firestick
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="footer-brand">Easy<span>IPTV</span> Canada</div>
+    <div class="footer-copy">© 2026 EasyIPTV Canada. All rights reserved.</div>
+    <div class="footer-links">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Unsubscribe</a>
+    </div>
+  </div>
+
+</div>
+</div>
+</body>
+</html>

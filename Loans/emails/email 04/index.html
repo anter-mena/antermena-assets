@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Need a loan today?</title>
+    
+    <!-- 
+    PERSONALIZATION VARIABLES USED IN THIS EMAIL:
+    - {{first_name}} = Customer's first name (used in headline)
+    
+    This will be dynamically replaced by your email marketing platform (e.g., Mailchimp, SendGrid, etc.)
+    Example: "Running low on funds, {{first_name}}?" becomes "Running low on funds, Sarah?"
+    -->
+    
+    <!-- Import Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Mona+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Mona Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .email-container {
+            max-width: 680px;
+            margin: 0 auto;
+            background-color: #ffffff;
+        }
+        
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 40px;
+            background-color: #ffffff;
+        }
+        
+        .header-cta {
+            background-color: #ff7b5f;
+            color: #ffffff;
+            padding: 14px 28px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            border-radius: 30px;
+            font-family: 'Mona Sans', sans-serif;
+            white-space: nowrap;
+        }
+        
+        .hero-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .content-section {
+            background-color: #f5f2e8;
+            padding: 50px 40px 60px;
+        }
+        
+        .main-headline {
+            font-family: 'Mona Sans', sans-serif;
+            font-size: 42px;
+            font-weight: 800;
+            color: #0f5f4e;
+            line-height: 1.2;
+            margin-bottom: 30px;
+        }
+        
+        .intro-text {
+            font-family: 'Mona Sans', sans-serif;
+            font-size: 16px;
+            color: #333333;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        .intro-text strong {
+            font-weight: 700;
+            color: #0f5f4e;
+        }
+        
+        .body-text {
+            font-family: 'Mona Sans', sans-serif;
+            font-size: 15px;
+            color: #333333;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+        
+        .highlight-text {
+            font-family: 'Mona Sans', sans-serif;
+            font-size: 15px;
+            color: #0f5f4e;
+            font-weight: 700;
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: #ff7b5f;
+            color: #ffffff;
+            padding: 16px 32px;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 600;
+            border-radius: 30px;
+            font-family: 'Mona Sans', sans-serif;
+        }
+        
+        .footer {
+            background-color: #0f5f4e;
+            color: #ffffff;
+            padding: 35px 40px 30px;
+            text-align: center;
+        }
+        
+        .footer-tagline {
+            font-family: 'Mona Sans', sans-serif;
+            font-size: 24px;
+            font-weight: 400;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+        
+        .footer-subtext {
+            font-family: 'Mona Sans', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            color: #7ec4b5;
+            margin-bottom: 30px;
+        }
+        
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .social-icon {
+            width: 24px;
+            height: 24px;
+            opacity: 0.9;
+        }
+        
+        .social-icon:hover {
+            opacity: 1;
+        }
+        
+        .footer-info {
+            font-family: 'Mona Sans', sans-serif;
+            font-size: 12px;
+            color: #ffffff;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        .footer-links {
+            margin-top: 20px;
+        }
+        
+        .footer-links a {
+            color: #7ec4b5;
+            text-decoration: none;
+            font-size: 12px;
+            margin: 0 10px;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        
+        @media only screen and (max-width: 680px) {
+            .header {
+                flex-direction: column;
+                gap: 20px;
+                padding: 20px;
+            }
+            
+            .header-cta {
+                width: 100%;
+                text-align: center;
+            }
+            
+            .content-section {
+                padding: 30px 20px 40px;
+            }
+            
+            .main-headline {
+                font-size: 32px;
+            }
+            
+            .footer {
+                padding: 30px 20px 25px;
+            }
+            
+            .footer-tagline {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <!-- Header -->
+        <div class="header">
+            <a href="https://www.needaloantoday.ca/" style="text-decoration: none;">
+                <img src="https://cdn.jsdelivr.net/gh/ChaosAfterParty/email_models@main/assets/needaloantodayLogo.png" 
+                     alt="needaloantoday" 
+                     style="height: 40px; width: auto; display: block;">
+            </a>
+            <a href="https://www.needaloantoday.ca/" class="header-cta">Get Started</a>
+        </div>
+        
+        <!-- Hero Image -->
+        <a href="https://www.needaloantoday.ca/">
+            <img src="https://raw.githubusercontent.com/ChaosAfterParty/email_models/refs/heads/main/assets/banner_03.png" 
+                 alt="needaloantoday - Fast loan application" 
+                 class="hero-image">
+        </a>
+        
+        <!-- Content Section -->
+        <div class="content-section">
+            <h1 class="main-headline">Running low on funds, {{first_name}}?</h1>
+            
+            <p class="intro-text">
+                Are you almost out of cash? <strong>Let's look into your next loan.</strong>
+            </p>
+            
+            <p class="body-text">
+                Your account is currently <strong>inactive</strong> with no upcoming loans. But your next loan is never too far away. We've loved helping you access fast funding when you needed it most.
+            </p>
+            
+            <p class="highlight-text">
+                So while you're thinking about your expenses, why not apply for your next loan with needaloantoday?
+            </p>
+            
+            <a href="https://www.needaloantoday.ca/" class="cta-button">Apply Now</a>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <a href="https://www.needaloantoday.ca/" style="text-decoration: none; display: inline-block; margin-bottom: 20px;">
+                <img src="https://cdn.jsdelivr.net/gh/ChaosAfterParty/email_models@main/assets/needaloantodayLogo2.png" 
+                     alt="needaloantoday" 
+                     style="height: 60px; width: auto; display: block;">
+            </a>
+            
+            <h2 class="footer-tagline">Fast, simple loan access.</h2>
+            <p class="footer-subtext">Quick approval. Same-day funding. Delivered.</p>
+            
+            <div class="social-icons">
+                <a href="#">
+                    <img src="https://cdn.jsdelivr.net/gh/ChaosAfterParty/email_models@main/assets/facebook.svg" 
+                         alt="Facebook" 
+                         class="social-icon"
+                         style="filter: brightness(0) invert(1);">
+                </a>
+                <a href="#">
+                    <img src="https://cdn.jsdelivr.net/gh/ChaosAfterParty/email_models@main/assets/instagram.svg" 
+                         alt="Instagram" 
+                         class="social-icon"
+                         style="filter: brightness(0) invert(1);">
+                </a>
+                <a href="#">
+                    <img src="https://cdn.jsdelivr.net/gh/ChaosAfterParty/email_models@main/assets/tiktok.png" 
+                         alt="TikTok" 
+                         class="social-icon"
+                         style="filter: brightness(0) invert(1);">
+                </a>
+                <a href="#">
+                    <img src="https://cdn.jsdelivr.net/gh/ChaosAfterParty/email_models@main/assets/x.svg" 
+                         alt="X" 
+                         class="social-icon"
+                         style="filter: brightness(0) invert(1);">
+                </a>
+            </div>
+            
+            <p class="footer-info">
+                Copyright © 2025 needaloantoday Financial Services Ltd. All rights reserved.<br>
+                Montreal, Quebec, Canada
+            </p>
+            
+            <div class="footer-links">
+                <a href="https://www.needaloantoday.ca/privacy-policy">Privacy Policy</a> | 
+                <a href="https://www.needaloantoday.ca/terms-of-service">Terms of Service</a> | 
+                <a href="#">Unsubscribe</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
