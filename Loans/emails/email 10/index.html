@@ -1,253 +1,145 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml"
+  xmlns:o="urn:schemas-microsoft-com:office:office">
+
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title>Back-to-school expenses adding up?</title>
+<!--[if mso]>
+<noscript>
+<xml>
+<o:OfficeDocumentSettings>
+<o:PixelsPerInch>96</o:PixelsPerInch>
+</o:OfficeDocumentSettings>
+</xml>
+</noscript>
+<![endif]-->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Butterfly+Kids&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+  table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+  img { -ms-interpolation-mode: bicubic; border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none; display: block; }
+  body { margin: 0; padding: 0; width: 100% !important; height: 100% !important; background-color: #e9e9e9; }
 
-  body {
-    display: flex;
-    justify-content: center;
-    background: #e9e9e9;
-    font-family: 'Poppins', Helvetica, Arial, sans-serif;
-    padding: 48px 0;
-  }
-
-  .wrapper {
-    width: 848px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-  }
-
-  /* ---------- HERO ---------- */
-
-  .email {
-    position: relative;
-    width: 848px;
-    height: 1600px;
-    background-image: url('https://cdn.jsdelivr.net/gh/anter-mena/antermena-assets@main/Loans/emails/email%2010/assets/background.jpg');
-    background-size: cover;
-    background-position: center;
-    overflow: hidden;
-  }
-
-  /* full-hero clickable overlay -> application form */
-  .hero-link {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    display: block;
-    text-decoration: none;
-  }
-
-  .top-text {
-    position: absolute;
-    top: 100px;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    color: #ffffff;
-    padding: 0 30px;
-    z-index: 2;
-    /* let clicks fall through to the hero link */
-    pointer-events: none;
-  }
-
-  .top-text .eyebrow {
-    display: block;
-    font-family: 'Poppins', Helvetica, Arial, sans-serif;
-    font-size: 16px;
-    letter-spacing: 4px;
-    font-weight: 600;
-    text-transform: uppercase;
-    color: #d7f96b;
-    margin-bottom: 12px;
-  }
-
-  .top-text h1 {
-    font-family: 'Butterfly Kids', 'Baloo 2', 'Trebuchet MS', cursive;
-    font-size: 100px;
-    font-weight: 400;
-    line-height: 1.08;
-    letter-spacing: 0.5px;
-    /* Butterfly Kids ships in a single weight — fake the extra thickness */
-    -webkit-text-stroke: 2.5px #ffffff;
-    paint-order: stroke fill;
-    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.28);
-  }
-
-  .bottom-block {
-    position: absolute;
-    bottom: 120px;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    color: #ffffff;
-    padding: 0 60px;
-    z-index: 2;
-    /* let clicks on empty areas fall through; button re-enables below */
-    pointer-events: none;
-  }
-
-  .bottom-block .shop-button {
-    pointer-events: auto;
-  }
-
-  .bottom-block p {
-    font-family: 'Poppins', Helvetica, Arial, sans-serif;
-    font-size: 22px;
-    font-weight: 400;
-    line-height: 1.6;
-    margin-bottom: 30px;
-    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.25);
-  }
-
-  .bottom-block .amount {
-    background: #d7f96b;
-    color: #1c3d3f;
-    font-weight: 700;
-    padding: 3px 12px;
-    border-radius: 6px;
-    white-space: nowrap;
-    text-shadow: none;
-  }
-
-  .shop-button {
-    display: inline-block;
-    background: #d7f96b;
-    color: #1c3d3f;
-    font-family: 'Poppins', Helvetica, Arial, sans-serif;
-    font-size: 19px;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    text-decoration: none;
-    padding: 16px 46px;
-    border-radius: 40px;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
-  }
-
-  /* ---------- REASSURANCE ---------- */
-
-  .reassurance {
-    background: #ffffff;
-    padding: 40px 80px;
-    text-align: center;
-  }
-
-  .reassurance p {
-    font-family: 'Poppins', Helvetica, Arial, sans-serif;
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 1.65;
-    color: #4a5a5b;
-  }
-
-  /* ---------- FOOTER ---------- */
-
-  .footer {
-    background: #1c3d3f;
-    padding: 44px 60px 46px;
-    text-align: center;
-  }
-
-  .footer .logo {
-    width: 200px;
-    height: auto;
-    display: block;
-    margin: 0 auto 22px;
-    /* renders the red/navy logo as solid white */
-    filter: brightness(0) invert(1);
-  }
-
-  .footer p {
-    font-family: 'Poppins', Helvetica, Arial, sans-serif;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 1.7;
-    color: #a8bcbd;
-    margin-bottom: 14px;
-  }
-
-  .footer a {
-    color: #d7f96b;
-    text-decoration: underline;
-  }
-
-  .footer .links {
-    margin-bottom: 18px;
-  }
-
-  .footer .copyright {
-    font-size: 11px;
-    color: #8aa1a2;
-    margin-bottom: 0;
+  @media only screen and (max-width: 848px) {
+    .email-container { width: 100% !important; }
+    .hero-img { width: 100% !important; height: auto !important; }
+    .outer-pad { padding: 20px 0 !important; }
+    .reassurance-pad { padding: 30px 26px !important; }
+    .footer-pad { padding: 34px 26px 36px !important; }
+    .footer-logo { width: 160px !important; }
   }
 </style>
 </head>
-<body>
 
-  <div class="wrapper">
+<body style="margin:0; padding:0; background-color:#e9e9e9;">
 
-    <!-- HERO -->
-    <div class="email">
-
-      <!-- whole photo is clickable -->
-      <a href="https://ask4loan.xyz/application-form" class="hero-link" aria-label="Start your request"></a>
-
-      <div class="top-text">
-        <span class="eyebrow">September is coming</span>
-        <h1>Back-to-school<br>expenses adding up?</h1>
-      </div>
-
-      <div class="bottom-block">
-        <p>School supplies, clothing, transportation, and registration costs can add up quickly. If you need extra funds before September, you can request between <span class="amount">C$300 and C$3,000</span> online in about 5 minutes.</p>
-        <a href="https://ask4loan.xyz/application-form" class="shop-button">Start your request</a>
-      </div>
-
-    </div>
-
-    <!-- REASSURANCE -->
-    <div class="reassurance">
-      <p>We believe accessing money should be effortless. That's why we've made the entire process paperless and available on your phone, tablet, or computer.</p>
-    </div>
-
-    <!-- FOOTER -->
-    <div class="footer">
-
-      <img src="https://cdn.jsdelivr.net/gh/anter-mena/antermena-assets@main/Loans/emails/email%2010/assets/ask4loanLogo.png" alt="Ask4loan" class="logo">
-
-      <p>
-        Toronto, ON, Canada<br>
-        <a href="mailto:support@ask4loan.xyz">support@ask4loan.xyz</a>
-      </p>
-
-      <p>
-        You are receiving this email because you subscribed or previously requested funds with Ask4loan.
-      </p>
-
-      <p class="links">
-        <a href="https://ask4loan.xyz/application-form">Unsubscribe</a> &nbsp;|&nbsp;
-        <a href="https://ask4loan.xyz/application-form">Manage preferences</a> &nbsp;|&nbsp;
-        <a href="https://ask4loan.xyz/privacy-policy">Privacy Policy</a>
-      </p>
-
-      <p class="copyright">
-        &copy; 2026 Ask4loan. All rights reserved.
-      </p>
-
-    </div>
-
+  <!-- Preview text (hidden) -->
+  <div style="display:none; font-size:1px; line-height:1px; max-height:0; max-width:0; opacity:0; overflow:hidden; mso-hide:all;">
+    Request C$300 to C$3,000 online in about 5 minutes &mdash; before September hits.
+    &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;
   </div>
+
+  <center style="width:100%; background-color:#e9e9e9;">
+
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#e9e9e9;">
+    <tr>
+      <td class="outer-pad" align="center" style="padding: 48px 0;">
+
+        <!--[if mso]>
+        <table role="presentation" width="848" align="center" cellpadding="0" cellspacing="0" border="0"><tr><td>
+        <![endif]-->
+
+        <table role="presentation" class="email-container" width="848" cellpadding="0" cellspacing="0" border="0"
+          style="width:848px; max-width:848px; margin:0 auto; background-color:#51a3ae; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+
+          <!-- ===== HERO BAND 1: eyebrow + headline (font baked in) ===== -->
+          <tr>
+            <td bgcolor="#51a3ae" align="center" style="background-color:#51a3ae; padding:0; font-size:0; line-height:0;">
+              <a href="https://ask4loan.xyz/application-form" target="_blank" style="display:block; text-decoration:none;"><img
+                src="https://cdn.jsdelivr.net/gh/anter-mena/antermena-assets@main/Loans/emails/email%2010/assets/hero-title.jpg"
+                alt="September is coming &mdash; Back-to-school expenses adding up?" width="848" class="hero-img"
+                style="display:block; width:848px; max-width:100%; height:auto; border:0;"></a>
+            </td>
+          </tr>
+
+          <!-- ===== HERO BAND 2: photo ===== -->
+          <tr>
+            <td bgcolor="#51a3ae" align="center" style="background-color:#51a3ae; padding:0; font-size:0; line-height:0;">
+              <a href="https://ask4loan.xyz/application-form" target="_blank" style="display:block; text-decoration:none;"><img
+                src="https://cdn.jsdelivr.net/gh/anter-mena/antermena-assets@main/Loans/emails/email%2010/assets/hero-photo.jpg"
+                alt="Two kids walking to school with lunch bags" width="848" class="hero-img"
+                style="display:block; width:848px; max-width:100%; height:auto; border:0;"></a>
+            </td>
+          </tr>
+
+          <!-- ===== HERO BAND 3: copy + button ===== -->
+          <tr>
+            <td bgcolor="#51a3ae" align="center" style="background-color:#51a3ae; padding:0; font-size:0; line-height:0;">
+              <a href="https://ask4loan.xyz/application-form" target="_blank" style="display:block; text-decoration:none;"><img
+                src="https://cdn.jsdelivr.net/gh/anter-mena/antermena-assets@main/Loans/emails/email%2010/assets/hero-cta.jpg"
+                alt="School supplies, clothing, transportation and registration costs add up quickly. Request between C$300 and C$3,000 online in about 5 minutes. Start your request."
+                width="848" class="hero-img"
+                style="display:block; width:848px; max-width:100%; height:auto; border:0;"></a>
+            </td>
+          </tr>
+
+          <!-- ===== REASSURANCE ===== -->
+          <tr>
+            <td class="reassurance-pad" align="center"
+              style="background-color:#ffffff; padding: 40px 80px; text-align:center; font-family:'Poppins', Helvetica, Arial, sans-serif;">
+              <p style="margin:0; font-size:15px; font-weight:400; line-height:1.65; color:#4a5a5b;">
+                We believe accessing money should be effortless. That's why we've made the entire process paperless and
+                available on your phone, tablet, or computer.
+              </p>
+            </td>
+          </tr>
+
+          <!-- ===== FOOTER ===== -->
+          <tr>
+            <td class="footer-pad" align="center"
+              style="background-color:#1c3d3f; padding: 44px 60px 46px; text-align:center; font-family:'Poppins', Helvetica, Arial, sans-serif;">
+
+              <img src="https://cdn.jsdelivr.net/gh/anter-mena/antermena-assets@main/Loans/emails/email%2010/assets/ask4loanLogo-white.png"
+                alt="Ask4loan" width="200" class="footer-logo"
+                style="display:block; width:200px; max-width:200px; height:auto; border:0; margin:0 auto 22px;">
+
+              <p style="margin:0 0 14px 0; font-size:12px; font-weight:400; line-height:1.7; color:#a8bcbd;">
+                Toronto, ON, Canada<br>
+                <a href="mailto:support@ask4loan.xyz" style="color:#d7f96b; text-decoration:underline;">support@ask4loan.xyz</a>
+              </p>
+
+              <p style="margin:0 0 14px 0; font-size:12px; font-weight:400; line-height:1.7; color:#a8bcbd;">
+                You are receiving this email because you subscribed or previously requested funds with Ask4loan.
+              </p>
+
+              <p style="margin:0 0 18px 0; font-size:12px; font-weight:400; line-height:1.7; color:#a8bcbd;">
+                <a href="https://ask4loan.xyz/application-form" target="_blank" style="color:#d7f96b; text-decoration:underline;">Unsubscribe</a> &nbsp;|&nbsp;
+                <a href="https://ask4loan.xyz/application-form" target="_blank" style="color:#d7f96b; text-decoration:underline;">Manage preferences</a> &nbsp;|&nbsp;
+                <a href="https://ask4loan.xyz/privacy-policy" target="_blank" style="color:#d7f96b; text-decoration:underline;">Privacy Policy</a>
+              </p>
+
+              <p style="margin:0; font-size:11px; font-weight:400; line-height:1.7; color:#8aa1a2;">
+                &copy; 2026 Ask4loan. All rights reserved.
+              </p>
+
+            </td>
+          </tr>
+
+        </table>
+
+        <!--[if mso]>
+        </td></tr></table>
+        <![endif]-->
+
+      </td>
+    </tr>
+  </table>
+  </center>
 
 </body>
 </html>
